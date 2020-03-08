@@ -10,7 +10,10 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "webpack --config build/webpack.lib.js"
+    "build": "npm run build:lib && npm run build:vue",
+    "build:lib": "cross-env BUILD_MODE=lib webpack",
+    "build:vue": "cross-env BUILD_MODE=vue webpack",
+    "dev:vue": "http-server -c0 . -o /examples/vue-app"
   },
   "keywords": [
     "jssdk",
@@ -29,6 +32,8 @@
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/preset-env": "^7.8.7",
     "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.2",
+    "http-server": "^0.12.1",
     "nuxt": "^2.11.0",
     "prettier": "^1.19.1",
     "webpack": "^4.42.0",

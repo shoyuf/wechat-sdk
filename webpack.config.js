@@ -1,20 +1,23 @@
 const path = require('path')
 
-const resolve = dr => path.resolve(__dirname, '..', dr)
+const resolve = dr => path.resolve(__dirname, dr)
+
+const isVueLib = 'vue' === process.env.BUILD_MODE
 
 module.exports = {
   mode: 'production',
-  entry: resolve('lib/vue.js'),
+  entry: resolve(isVueLib ? 'lib/vue.js' : 'lib/wechat/index.js'),
   output: {
     path: resolve('dist'),
-    filename: '',
-    libraryTarget: 'umd2'
+    filename: isVueLib ? 'vue.js' : 'wechat.js',
+    libraryTarget: 'umd2',
+    library: isVueLib ? 'VueWechat' : 'WechatSDKManager'
   },
   devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
