@@ -3,17 +3,15 @@
   "version": "0.1.0",
   "description": "Manager Wechat(Weixin) jssdk, wrapper of offical sdk library. Provide vue/nuxt plugin for easy use.",
   "main": "dist/wechat.js",
-  "module": "lib/wechat/index.js",
+  "module": "dist/wechat.esm.js",
+  "unpkg": "dist/wechat.global.js",
   "files": [
     "lib",
     "dist"
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build:lib && npm run build:vue",
-    "build:lib": "cross-env BUILD_MODE=lib webpack",
-    "build:vue": "cross-env BUILD_MODE=vue webpack",
-    "dev:vue": "http-server -c0 . -o /examples/vue-app"
+    "build": "node scripts/build.js"
   },
   "keywords": [
     "jssdk",
@@ -24,19 +22,43 @@
   ],
   "author": "rexerwang",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.@(md|json)": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
-    "babel-loader": "^8.0.6",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
-    "http-server": "^0.12.1",
-    "nuxt": "^2.11.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "execa": "^4.0.0",
+    "husky": "^4.2.3",
+    "minimist": "^1.2.0",
     "prettier": "^1.19.1",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "rollup": "^2.0.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "standard-version": "^7.1.0"
   }
 }

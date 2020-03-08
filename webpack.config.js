@@ -11,7 +11,7 @@ module.exports = {
     path: resolve('dist'),
     filename: isVueLib ? 'vue.js' : 'wechat.js',
     libraryTarget: 'umd2',
-    library: isVueLib ? 'VueWechat' : 'WechatSDKManager'
+    library: isVueLib ? 'VueWechat' : 'Wechat'
   },
   devtool: 'source-map',
   module: {
