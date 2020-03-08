@@ -1,0 +1,37 @@
+{
+  "name": "wechat-sdk",
+  "version": "0.1.0",
+  "description": "Manager Wechat(Weixin) jssdk, wrapper of offical sdk library. Provide vue/nuxt plugin for easy use.",
+  "main": "dist/wechat.js",
+  "module": "lib/wechat/index.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "webpack --config build/webpack.lib.js"
+  },
+  "keywords": [
+    "jssdk",
+    "wechat",
+    "weixin",
+    "vue-jssdk",
+    "nuxt-jssdk"
+  ],
+  "author": "rexerwang",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.merge": "^4.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "nuxt": "^2.11.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
