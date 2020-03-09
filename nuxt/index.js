@@ -6,8 +6,8 @@ module.exports = function(moduleOptions) {
   // Merge all option sources
   const options = merge(
     { vesion: process.env.JSSDK_VERSION },
-    moduleOptions,
-    this.options.wechat
+    this.options.wechat,
+    moduleOptions
   )
 
   // Copy wechat source

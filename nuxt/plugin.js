@@ -5,8 +5,13 @@ export default function(ctx, inject) {
 
   SDKManager.isWechat || console.warn('当前为非微信环境')
 
+  const { vconsole, ...options } = <%= JSON.stringify(options) %>
+
   // Set options
-  SDKManager.options = <%= JSON.stringify(options) %>
+  SDKManager.options = options
+
+  // Enable VConsole
+  vconsole && SDKManager.enableVConsole()
 
   // Create instance
   const wechat = new SDKManager()
