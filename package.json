@@ -1,6 +1,6 @@
 {
   "name": "@rexerwang/wechat-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Manager Wechat(Weixin) jssdk, wrapper of offical sdk library. Provide vue/nuxt plugin for easy use.",
   "main": "dist/wechat.umd.js",
   "module": "dist/wechat.esm.js",

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/rexerwang/case-modifier/compare/v0.1.1...v0.1.2) (2020-03-09)
+
+
+### Features
+
+* 调整目录结构 & 优化校验 ([a3b5403](https://github.com/rexerwang/case-modifier/commit/a3b5403afe45ee69b79240f2b596a690690f7fda))
+
 ### [0.1.1](https://github.com/rexerwang/case-modifier/compare/v0.1.0...v0.1.1) (2020-03-09)
 
 
