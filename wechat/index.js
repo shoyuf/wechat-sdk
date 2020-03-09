@@ -282,7 +282,7 @@ class SDKManager {
    * @see https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html#4
    */
   config(config, jsApiList) {
-    if (!isObject(config) || (jsApiList && isArray(jsApiList))) {
+    if (!isObject(config) || (jsApiList && !isArray(jsApiList))) {
       throw new TypeError('Invalid arguments')
     }
 

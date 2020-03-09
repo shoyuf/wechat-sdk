@@ -9,24 +9,17 @@ const args = minimist(process.argv.slice(2))
 
 const entryConfigs = {
   main: {
-    input: 'lib/wechat/index.js',
+    input: 'wechat/index.js',
     output: {
       file: 'dist/wechat',
       name: 'Wechat'
     }
   },
   vue: {
-    input: 'lib/vue.js',
+    input: 'vue/index.js',
     output: {
       file: 'dist/vue',
       name: 'VueWechat'
-    }
-  },
-  nuxt: {
-    input: 'lib/wechat/index.js',
-    output: {
-      file: 'dist/nuxt/wechat-core',
-      format: 'esm'
     }
   }
 }

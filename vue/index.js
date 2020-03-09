@@ -1,4 +1,4 @@
-import { SDKManager, WechatError } from './wechat'
+import { SDKManager, WechatError } from '../wechat'
 
 /**
  * Vue安装插件
