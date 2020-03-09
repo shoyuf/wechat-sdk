@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/rexerwang/case-modifier/compare/v0.1.0...v0.1.1) (2020-03-09)
+
+
+### Features
+
+* 更新nuxt-module目录结构 ([42f11e2](https://github.com/rexerwang/case-modifier/commit/42f11e2d0ac53d131cdda6112ce4addd2bac7e12))
+
 ## 0.1.0 (2020-03-09)
 
 
