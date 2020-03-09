@@ -14,7 +14,8 @@
     "build": "node scripts/build.js",
     "dev:vue": "cd examples/vue-app && npm run serve",
     "dev:nuxt": "nuxt examples/nuxt-app",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "jssdk",
