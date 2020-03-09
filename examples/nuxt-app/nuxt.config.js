@@ -8,6 +8,6 @@ module.exports = {
   render: {
     resourceHints: false
   },
-  modules: [{ handler: require('../../lib/nuxt') }],
+  modules: [{ handler: require('../../nuxt') }],
   wechat: { version: '1.4.0' }
 }

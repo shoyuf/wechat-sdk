@@ -30,7 +30,13 @@ export default {
         this.message.push('JSSDK脚本加载成功！，v' + this.$wechat.version)
 
         this.message.push('注册JSSDK...')
-        await this.$wechat.config({ debug: true })
+        await this.$wechat.config({ debug: true }, [
+          'showAllNonBaseMenuItem',
+          'hideAllNonBaseMenuItem',
+          'showMenuItems',
+          'updateAppMessageShareData',
+          'updateTimelineShareData'
+        ])
         this.message.push('JSSDK注册成功！')
 
         this.message.push('配置微信分享信息')
