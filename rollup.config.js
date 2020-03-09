@@ -1,7 +1,9 @@
 import babel from 'rollup-plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 import minimist from 'minimist'
+import merge from 'lodash.merge'
 
 const args = minimist(process.argv.slice(2))
 
@@ -29,12 +31,12 @@ const entryConfigs = {
   }
 }
 
-const getConfig = ({ format, entry }) => {
+function createConfig({ format, entry, minify }) {
   let extname = null
   switch (format) {
-    // case 'umd':
-    //   extname = '.js'
-    //   break
+    case 'umd':
+      extname = '.umd.js'
+      break
     case 'cjs':
       extname = '.cjs.js'
       break
@@ -49,27 +51,23 @@ const getConfig = ({ format, entry }) => {
   }
 
   const config = entryConfigs[entry]
-
   config.output.file += extname
   config.output.format = format
+  config.output.sourcemap = true
 
-  return config
-}
-
-const getPlugins = ({ format, minify }) => {
   const plugins = [
     babel({ runtimeHelpers: true, exclude: 'node_modules/**' }),
-    commonjs()
+    commonjs(),
+    resolve()
   ]
 
   if (minify || format === 'iife' || format === 'umd') {
     plugins.push(terser())
   }
 
-  return plugins
+  config.plugins = plugins
+
+  return config
 }
 
-export default {
-  ...getConfig(args),
-  plugins: getPlugins(args)
-}
+export default createConfig(merge({ entry: process.env.BUILD_ENTRY }, args))
