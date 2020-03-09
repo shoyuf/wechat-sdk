@@ -1,5 +1,5 @@
 {
-  "name": "wechat-sdk",
+  "name": "@rexerwang/wechat-sdk",
   "version": "0.1.0",
   "description": "Manager Wechat(Weixin) jssdk, wrapper of offical sdk library. Provide vue/nuxt plugin for easy use.",
   "main": "dist/wechat.umd.js",
@@ -24,6 +24,13 @@
   ],
   "author": "rexerwang",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rexerwang/case-modifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rexerwang/case-modifier/issues"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
