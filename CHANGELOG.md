@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/rexerwang/case-modifier/compare/v0.1.3...v0.1.4) (2020-03-09)
+
+
+### Features
+
+* 优化nuxt参数及错误信息 ([b0ea34c](https://github.com/rexerwang/case-modifier/commit/b0ea34c34562c3f09a260f43c1b0f1cee94ba6fd))
+
+
+### Bug Fixes
+
+* 修复环境提示 ([89a6f43](https://github.com/rexerwang/case-modifier/commit/89a6f43937b52f0dcd4d62b9c8867fe0f58b2019))
+
 ### [0.1.3](https://github.com/rexerwang/case-modifier/compare/v0.1.2...v0.1.3) (2020-03-09)
 
 
