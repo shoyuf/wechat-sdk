@@ -7,8 +7,10 @@
   "browser": "dist/wechat.global.js",
   "unpkg": "dist/wechat.global.js",
   "files": [
-    "lib",
-    "dist"
+    "dist",
+    "wechat",
+    "vue",
+    "nuxt"
   ],
   "sideEffects": false,
   "scripts": {
