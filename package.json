@@ -13,7 +13,8 @@
   "scripts": {
     "build": "node scripts/build.js",
     "dev:vue": "cd examples/vue-app && npm run serve",
-    "dev:nuxt": "nuxt examples/nuxt-app"
+    "dev:nuxt": "nuxt examples/nuxt-app",
+    "release": "standard-version"
   },
   "keywords": [
     "jssdk",
