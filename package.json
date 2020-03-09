@@ -4,6 +4,7 @@
   "description": "Manager Wechat(Weixin) jssdk, wrapper of offical sdk library. Provide vue/nuxt plugin for easy use.",
   "main": "dist/wechat.umd.js",
   "module": "dist/wechat.esm.js",
+  "browser": "dist/wechat.global.js",
   "unpkg": "dist/wechat.global.js",
   "files": [
     "lib",
