@@ -1,4 +1,4 @@
-import merge from 'lodash.merge'
+import deepmerge from 'deepmerge'
 import { loadScript, isObject, isArray, isFunction, deepFreeze } from './utils'
 import WechatError from './error'
 import managerOptions from './options'
@@ -46,12 +46,19 @@ class SDKManager {
   }
   /**
    * 设置配置项
+   *
    * @param {Object} options
    *
    * @static
    */
   static set options(options) {
-    this.#options = deepFreeze(merge({}, managerOptions, options))
+    if (!isObject(options)) return
+
+    this.#options = deepFreeze(
+      deepmerge(managerOptions, options, {
+        arrayMerge: (target, source) => source
+      })
+    )
   }
 
   /**

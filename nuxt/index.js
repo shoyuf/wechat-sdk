@@ -1,13 +1,16 @@
 const path = require('path')
 const fs = require('fs')
-const merge = require('lodash.merge')
+const deepmerge = require('deepmerge')
 
 module.exports = function(moduleOptions) {
   // Merge all option sources
-  const options = merge(
-    { vesion: process.env.JSSDK_VERSION },
-    this.options.wechat,
-    moduleOptions
+  const options = deepmerge(
+    {
+      version: process.env.JSSDK_VERSION,
+      ...(this.options.wechat || {})
+    },
+    moduleOptions,
+    { arrayMerge: (target, source) => source }
   )
 
   // Copy wechat source

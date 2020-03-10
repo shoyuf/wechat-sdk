@@ -1,3 +1,5 @@
+import deepmerge from 'deepmerge'
+
 /**
  * 数组检测
  *

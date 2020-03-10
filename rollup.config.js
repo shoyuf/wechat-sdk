@@ -3,7 +3,6 @@ import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
 import minimist from 'minimist'
-import merge from 'lodash.merge'
 
 const args = minimist(process.argv.slice(2))
 
@@ -63,4 +62,4 @@ function createConfig({ format, entry, minify }) {
   return config
 }
 
-export default createConfig(merge({ entry: process.env.BUILD_ENTRY }, args))
+export default createConfig({ entry: process.env.BUILD_ENTRY, ...args })
