@@ -320,7 +320,7 @@ class SDKManager {
       })
       // 注册error事件
       this.wx.error(e =>
-        reject(new WechatError(e, WechatError.ERR_SDK_INACTIVE))
+        reject(new WechatError(e.errMsg, WechatError.ERR_SDK_INACTIVE))
       )
     })
   }
