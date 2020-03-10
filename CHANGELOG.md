@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/rexerwang/wechat-sdk/compare/v0.1.5...v0.1.6) (2020-03-10)
+
+
+### Features
+
+* 调整merge方法 ([2e730db](https://github.com/rexerwang/wechat-sdk/commit/2e730db0449af1046e3e89c4ff3035e61bac21e6))
+
 ### [0.1.5](https://github.com/rexerwang/wechat-sdk/compare/v0.1.4...v0.1.5) (2020-03-10)
 
 
