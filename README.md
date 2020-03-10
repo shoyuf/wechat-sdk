@@ -22,7 +22,7 @@ yarn add @rexerwang/wechat-sdk
  - Promisify: `SDKManager.invoke(api, args)`
  - 正常方式: `SDKManager.invokeStrict(api, args)`
 
-针对异常，提供`WechatError`统一异常类管理[lib/wechat/error.js](https://github.com/rexerwang/wechat-sdk/blob/master/lib/wechat/error.js)，额外包含`code`错误状态码，`res`微信接口返回数据。
+针对异常，提供`WechatError`统一异常类管理[wechat/error.js](https://github.com/rexerwang/wechat-sdk/blob/master/wechat/error.js)，额外包含`code`错误状态码，`res`微信接口返回数据。
 
 针对微信分享，提供`SDKManager.setupShareData`，对新老版本接口做兼容处理，可放心使用（优先使用老版本接口）。
 
@@ -30,7 +30,7 @@ yarn add @rexerwang/wechat-sdk
 ## Usage
 
 ### options
-配置项见：[lib/wechat/options.js](https://github.com/rexerwang/wechat-sdk/blob/master/lib/wechat/options.js#L4)
+配置项见：[wechat/options.js](https://github.com/rexerwang/wechat-sdk/blob/master/wechat/options.js#L4)
 
 ```js
 // 1. 获取（只读）
