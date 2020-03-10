@@ -29,12 +29,9 @@
   ],
   "author": "rexerwang",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rexerwang/case-modifier.git"
-  },
+  "repository": "rexerwang/wechat-sdk",
   "bugs": {
-    "url": "https://github.com/rexerwang/case-modifier/issues"
+    "url": "https://github.com/rexerwang/wechat-sdk/issues"
   },
   "husky": {
     "hooks": {
