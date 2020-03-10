@@ -189,6 +189,10 @@ class SDKManager {
     }
   }
 
+  async enableVConsole() {
+    return await SDKManager.enableVConsole()
+  }
+
   /**
    * 异步加载jssdk脚本
    *
