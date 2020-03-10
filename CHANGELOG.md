@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/rexerwang/wechat-sdk/compare/v0.1.4...v0.1.5) (2020-03-10)
+
+
+### Features
+
+* 增加`enableVConsole`成员方法 ([f25f79f](https://github.com/rexerwang/wechat-sdk/commit/f25f79fe1e2eb5f9a7875ac6daec95985e1a6920))
+
 ### [0.1.4](https://github.com/rexerwang/case-modifier/compare/v0.1.3...v0.1.4) (2020-03-09)
 
 
