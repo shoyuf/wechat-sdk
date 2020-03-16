@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2020 rexerwang
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
 const path = require('path')
 const fs = require('fs')
 const deepmerge = require('deepmerge')

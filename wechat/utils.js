@@ -1,4 +1,9 @@
-import deepmerge from 'deepmerge'
+/**
+ * Copyright (c) 2020 rexerwang
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
 
 /**
  * 数组检测
