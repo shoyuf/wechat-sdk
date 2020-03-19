@@ -1,4 +1,11 @@
 /**
+ * Copyright (c) 2020 rexerwang
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+/**
  * 默认配置项
  */
 export default {
