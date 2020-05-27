@@ -600,7 +600,7 @@ class SDKManager {
     let [appConfig, timelineConfig] = config
     if (!timelineConfig) timelineConfig = appConfig
 
-    let useOld = true
+    let useOld = false
     try {
       this._checkApiStatus('onMenuShareAppMessage')
     } catch (error) {
