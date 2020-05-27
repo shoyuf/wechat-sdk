@@ -570,7 +570,7 @@ class SDKManager {
    * @throws {WechatError}
    */
   showShareMenuOnly() {
-    this.invokeStrict('hideAllNonBaseMenuItem')
+    // this.invokeStrict('hideAllNonBaseMenuItem')
     this.invokeStrict('showMenuItems', {
       menuList: [this.MenuItem.SHARE_APPMESSAGE, this.MenuItem.SHARE_TIMELINE]
     })
