@@ -571,6 +571,7 @@ class SDKManager {
    */
   showShareMenuOnly() {
     // this.invokeStrict('hideAllNonBaseMenuItem')
+    debugger
     this.invokeStrict('showMenuItems', {
       menuList: [this.MenuItem.SHARE_APPMESSAGE, this.MenuItem.SHARE_TIMELINE]
     })
